@@ -26,9 +26,10 @@ class pageController extends Controller
         $date = new Datetime();
 
         $idPost = $date->format('d-m-Y').'1'.'nqcuong';
-        Date+index+admin
-        //dd(Hash::make($idPost));
+        //Date+index+admin
+        dd(Hash::make($idPost));
     }
+
     //Question Details
     public function getQuestionDetails(){
         return view('page.question_details');
