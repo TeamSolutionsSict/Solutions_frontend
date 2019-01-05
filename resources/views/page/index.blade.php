@@ -68,7 +68,4 @@
         </div>
     </div>
 </div><!-- End page-content -->
-</div><!-- End main -->
-</div><!-- End row -->
-</section><!-- End container -->
 @endsection

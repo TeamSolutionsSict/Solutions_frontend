@@ -29,18 +29,23 @@
 <body>
     <div class="loader"><div class="loader_html"></div></div>
     <div id="wrap" class="grid_1200">
+
         @include('page.header')
         @yield('wrap-content')
+
         <section class="container main-content">
             <div class="row">
+                
                 <div class="col-md-9">
                     @yield('content')
-                    @include('page.slide-bar')
                 </div>
+
+                @include('page.slide-bar')
             </div><!-- End row -->
         </section><!-- End container -->
 
         @include('page.footer')
+        
     </div><!-- End wrap -->
     <div class="go-up"><i class="icon-chevron-up"></i></div>
 

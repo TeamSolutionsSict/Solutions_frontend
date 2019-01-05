@@ -3,31 +3,83 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
+use Datetime;
 use Hash;
+use Auth;
+use Validator;
+use Session;
+
+use App\KeywordModel;
+use App\PostkeyModel;
+use App\PostModel;
 
 class pageController extends Controller
 {
-    //PHẦN NÀY CỦA CHÂU
-    //trang chủ
     public function getHome(){
         return view('page.index');
     }
-    //điều khoản bắt buộc trước khi thêm câu hỏi
+
     public function getTerms(){
         return view('page.terms');
     }
-    //Add question
+
     public function getAddQuestion(){
         return view('page.add_question');
     }
 
     public function postAddQuestion(Request $request){
-        //Hash id post hihi
+        //Lấy thời gian hiện tại
         $date = new Datetime();
+        //Lấy username
+        $username = 'cuongdeptrai';
+        //id_post = username + ngày giờ hiện tại + random 8 ký tự
+        $ahihi = $username.$date->format('d-m-Y').Str::random(8);
+        $idPost = Hash::make($ahihi);
 
-        $idPost = $date->format('d-m-Y').'1'.'nqcuong';
-        //Date+index+admin
-        dd(Hash::make($idPost));
+        //Validator form nhập vào
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+        ];
+        $validator = $request->validate($rules);
+
+        $keyArr = explode(',',$request->question_tags);
+        foreach ($keyArr as $key => $value) {
+            $keyword = KeywordModel::where('keyword','=',$value)->get()->toArray();
+            //dd($keyword[0]['id']);
+
+            if(count($keyword) == 0){
+                $keyword = new KeywordModel();
+                $keyword->keyword = $value;
+                $keyword->status = 1;
+                $keyword->save();
+
+                $keypost = new PostkeyModel();
+                $keypost->id_post = $idPost;
+                $keypost->id_keyword = $keyword->id;
+                $keypost->save();
+            }else{
+                $keypost = new PostkeyModel();
+                $keypost->id_post = $idPost;
+                // dd($keyword[0]['id']);
+                $keypost->id_keyword = $keyword[0]['id'];
+                $keypost->save();
+            }
+        }
+
+        $post = new PostModel();
+        $post->id = $idPost;
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->username = $username;
+        $post->timepost = $date;
+        $post->status = 1;
+        $post->save();
+
+        return redirect()->back()->with(['flag'=>'success','message'=>'Thành công !']);
+
     }
 
     //Question Details
