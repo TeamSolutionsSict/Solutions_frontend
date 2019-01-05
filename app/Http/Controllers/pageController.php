@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Hash;
 
 class pageController extends Controller
 {
@@ -18,6 +19,15 @@ class pageController extends Controller
     //Add question
     public function getAddQuestion(){
         return view('page.add_question');
+    }
+
+    public function postAddQuestion(Request $request){
+        //Hash id post hihi
+        $date = new Datetime();
+
+        $idPost = $date->format('d-m-Y').'1'.'nqcuong';
+        Date+index+admin
+        //dd(Hash::make($idPost));
     }
     //Question Details
     public function getQuestionDetails(){

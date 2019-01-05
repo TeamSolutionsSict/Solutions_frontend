@@ -11,30 +11,15 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('home',['as'=>'get.Home','uses'=>'pageController@getHome']);
 
-//PHẦN NÀY CỦA CHÂU
-//Page group
-Route::group(['prefix'=>'page'], function(){
-    //Home
-    Route::get('home',['as'=>'getHome','uses'=>'pageController@getHome']);
+Route::get('terms',['as'=>'get.Terms','uses'=>'pageController@getTerms']);
 
-    //Điều khoản (terms)
-    Route::get('terms',['as'=>'getTerms','uses'=>'pageController@getTerms']);
+Route::get('add-question',['as'=>'get.AddQuestion','uses'=>'pageController@getAddQuestion']);
+Route::post('add-question',['as'=>'post.AddQuestion','uses'=>'pageController@postAddQuestion']);
 
-    //User (profile)
-    Route::get('add-question',['as'=>'getAddQuestion','uses'=>'pageController@getAddQuestion']);
+Route::get('question-details',['as'=>'get.QuestionDetails','uses'=>'pageController@getQuestionDetails']);
 
-    //Question details
-    Route::get('question-details',['as'=>'getQuestionDetails','uses'=>'pageController@getQuestionDetails']);
+Route::get('user',['as'=>'get.User','uses'=>'pageController@getUser']);
 
-    //User
-    //ĐÂY CHỈ LÀ TRANG CHUNG, CÒN KHI NGƯỜI DÙNG ĐĂNG NHẬP THÌ HIỂN THỊ ĐÚNG THEO USERNAME
-    Route::get('user',['as'=>'getUser','uses'=>'pageController@getUser']);
-//    Route::get('user/{username}',['as'=>'getUser','uses'=>'pageController@getUser']);
-
-    //Contact
-    Route::get('contact',['as'=>'getContact','uses'=>'pageController@getContact']);
-});
+Route::get('contact',['as'=>'get.Contact','uses'=>'pageController@getContact']);

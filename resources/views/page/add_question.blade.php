@@ -1,4 +1,4 @@
-@extends('master-page')
+@extends('page.master')
 @section('content')
 
     <div class="page-content ask-question">
@@ -19,13 +19,12 @@
                     </p>
                     <label class="required">Details<span>*</span></label>
                 </div>
-                <div id="form-textarea">
+                <div id="form-textarea" style="margin-top:10px;">
                     <p>
                         <textarea id="editor1" aria-required="true" ></textarea>
-                        <span class="form-description">Type the description thoroughly and in detail .</span>
                     </p>
                 </div>
-                <script src="ckeditor/ckeditor.js"></script>
+                <script src="public/page/ckeditor/ckeditor.js"></script>
                 <script> CKEDITOR.replace('editor1'); </script>
                 <p class="form-submit">
                     <input type="submit" id="publish-question" value="Publish Your Question" class="button color small submit">
