@@ -94,36 +94,31 @@
     <section class="container clearfix">
         <nav class="header-top-nav">
             <ul>
-                <li><a href="contact_us.html"><i class="icon-envelope"></i>Contact</a></li>
-                <li><a href="#"><i class="icon-headphones"></i>Support</a></li>
-                <li><a href="login.html" id="login-panel"><i class="icon-user"></i>Login Area</a></li>
+                <li><a href="{{route('get.Contact')}}"><i class="icon-envelope"></i>Contact</a></li>
+                {{--<li><a href="#"><i class="icon-headphones"></i>Support</a></li>--}}
+                {{-- Sau khi đăng nhập, nút này sẽ thành Profile và ẩn đi form login --}}
+                <li><a href="" id="login-panel"><i class="icon-user"></i>Login Area</a></li>
             </ul>
         </nav>
-        <div class="header-search">
-            <form>
-                <input type="text" value="Search here ..." onfocus="if(this.value=='Search here ...')this.value='';" onblur="if(this.value=='')this.value='Search here ...';">
-                <button type="submit" class="search-submit"></button>
-            </form>
-        </div>
     </section><!-- End container -->
 </div><!-- End header-top -->
 <header id="header">
-    <section class="container clearfix">
-        <div class="logo"><a href="{{route('get.Home')}}"><img alt="" src="images/logo.png"></a></div>
-        <nav class="navigation">
-            <ul>
-                <li>
-                    <a href="{{route('get.Home')}}">Home</a>
-                </li>
-                <li class="ask_question">
-                    <a href="{{route('get.Terms')}}">Ask Question</a>
-                </li>
-                <li>
-                    <a href="{{route('get.User')}}">User</a>
-                </li>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo"><a href="{{route ('get.Home')}}"><img alt="" src="{{url(asset('page/images/logo.png'))}}"></a></div>
+            </div>
+            <div class="col-md-9">
+                <div class="searchnav">
+                    <form>
+                        <button type="submit"><a href="#" title=""><i class="icon-search"></i></a></button>
+                        <input type="search" value="Search here ..." onfocus="if(this.value=='Search here ...')this.value='';" onblur="if(this.value=='')this.value='Search here ...';">
+                    </form>
+                </div>
 
-                <li><a href="{{route('get.Contact')}}">Contact Us</a></li>
-            </ul>
-        </nav>
-    </section><!-- End container -->
-</header><!-- End header -->
+            </div>
+        </div>
+    </div>
+
+</header>
+
