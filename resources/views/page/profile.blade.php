@@ -10,33 +10,63 @@
 
     <div class="page-content">
 
+        {{--NẾU ĐĂNG NHẬP SẼ HIỆN PHẦN PROFILE DƯỚI - CÓ THỂ SỮA CHỮA--}}
+        <div class="boxedtitle page-title"><h2>Edit Profile</h2></div>
+
         <div class="form-style form-style-4">
-            {{----}}
-            {{--ĐÂY LÀ XEM PROFILE CỦA NGƯỜI DÙNG KHÁC (xem theo Username), KHÔNG THỂ CHỈNH SỬA--}}
-            <div class="row">
-                <div class="user-profile">
-                    <div class="col-md-12">
+            <form>
+                <div class="form-inputs clearfix">
+                    <p>
+                        <label>First Name</label>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <label>Last Name</label>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <label class="required">E-Mail<span>*</span></label>
+                        <input type="email">
+                    </p>
+                    <p>
+                        <label>Phone</label>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <label class="required">Password<span>*</span></label>
+                        <input type="password" value="">
+                    </p>
+                    <p>
+                        <label class="required">Confirm Password<span>*</span></label>
+                        <input type="password" value="">
+                    </p>
 
-                        <h2>User name</h2>
-                        <div class="user-profile-img"><img width="60" height="60" src="{{url(asset('page/images/demo/admin.jpg'))}}" alt="admin"></div>
-                        <div class="ul_list ul_list-icon-ok about-user">
-                            <ul>
-                                <li>Name : <span>Đây là tên</span></li>
-                                <li>Email : <span>abc@xyz.com</span></li>
-                                <li>Phone : <span>0123 456 789</span></li>
-                            </ul>
+                </div>
+                <div class="form-style form-style-2">
+                    <div class="user-profile-img"><img src="{{ url(asset('page/images/demo/admin.jpg')) }}" alt="admin"></div>
+                    <p class="user-profile-p">
+                        <label>Profile Picture</label>
+                    <div class="fileinputs">
+                        <input type="file" class="file">
+                        <div class="fakefile">
+                            <button type="button" class="button small margin_0">Select file</button>
+                            <span><i class="icon-arrow-up"></i>Browse</span>
                         </div>
-                        <hr>
-                    </div><!-- End col-md-12 -->
-                </div><!-- End user-profile -->
-            </div><!-- End row -->
+                    </div>
+                    <p></p>
+                    <div class="clearfix"></div>
 
-            {{----}}
+                </div>
+
+                <p class="form-submit">
+                    <input type="submit" value="Update Profile" class="button color small login-submit submit">
+                </p>
+            </form>
 
             <br><br>
             <div class="page-content page-content-user-profile">
                 <div class="user-profile-widget">
-                    <h2 style="color: #fdb655">(Username) Stats</h2>
+                    <h2 style="color: #fdb655">User Stats</h2>
                     <div class="ul_list ul_list-icon-ok">
                         <ul>
                             <li><i class="icon-question-sign"></i><a href="user_questions.html">Total Of Questions<span> ( <span>30</span> ) </span></a></li>

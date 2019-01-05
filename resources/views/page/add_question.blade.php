@@ -1,15 +1,24 @@
-@extends('master-page')
+@extends('page.master')
+
+
+@section ('section-warp')
+    <div class="section-warp ask-me">
+
+    </div><!-- End section-warp -->
+@endsection
+
 @section('content')
 
     <div class="page-content ask-question">
         <div class="boxedtitle page-title"><h2>Ask Question</h2></div>
 
         <div class="form-style form-style-3" id="question-submit">
-            <form>
+            <form action="" method="POST">{{-- {{ route('post.AddQuestion') }} --}}
+                {{ csrf_field() }}
                 <div class="form-inputs clearfix">
                     <p>
                         <label class="required">Question Title<span>*</span></label>
-                        <input type="text" id="question-title">
+                        <input type="text" id="question-title" name="title">
                         <span class="form-description">Please choose an appropriate title for the question to answer it even easier .</span>
                     </p>
                     <p>
@@ -19,13 +28,12 @@
                     </p>
                     <label class="required">Details<span>*</span></label>
                 </div>
-                <div id="form-textarea">
+                <div id="form-textarea" style="margin-top:10px;">
                     <p>
-                        <textarea id="editor1" aria-required="true" ></textarea>
-                        <span class="form-description">Type the description thoroughly and in detail .</span>
+                        <textarea id="editor1" aria-required="true" name="content"></textarea>
                     </p>
                 </div>
-                <script src="ckeditor/ckeditor.js"></script>
+                <script src="{{asset('page/ckeditor/ckeditor.js')}}"></script>
                 <script> CKEDITOR.replace('editor1'); </script>
                 <p class="form-submit">
                     <input type="submit" id="publish-question" value="Publish Your Question" class="button color small submit">

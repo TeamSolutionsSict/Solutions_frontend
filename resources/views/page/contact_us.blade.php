@@ -1,4 +1,11 @@
-@extends('master-page')
+@extends('page.master')
+
+@section ('section-warp')
+    <div class="section-warp ask-me">
+
+    </div><!-- End section-warp -->
+@endsection
+
 @section('content')
 
     <div class="col-md-12">
@@ -14,67 +21,67 @@
                         <i class="icon-share"></i>Social links :
                         <p>
                             <a href="#" original-title="Facebook" class="tooltip-n">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#3b5997" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-facebook"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#3b5997" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-facebook"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a href="#" original-title="Twitter" class="tooltip-n">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#00baf0" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-twitter"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#00baf0" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-twitter"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a original-title="Youtube" class="tooltip-n" href="#">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#cc291f" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-youtube"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#cc291f" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-youtube"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a href="#" original-title="Linkedin" class="tooltip-n">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#006599" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-linkedin"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#006599" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-linkedin"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a href="#" original-title="Google plus" class="tooltip-n">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#ca2c24" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-gplus"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#ca2c24" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-gplus"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a original-title="RSS" class="tooltip-n" href="#">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#F18425" span_hover="#2f3239">
-													<i i_color="#FFF" class="icon-rss"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#F18425" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="icon-rss"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a original-title="Instagram" class="tooltip-n" href="#">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#306096" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-instagram"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#306096" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-instagram"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a original-title="Dribbble" class="tooltip-n" href="#">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#e64281" span_hover="#2f3239">
-													<i i_color="#FFF" class="social_icon-dribbble"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#e64281" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="social_icon-dribbble"></i>
+                                    </span>
+                                </span>
                             </a>
                             <a original-title="Pinterest" class="tooltip-n" href="#">
-											<span class="icon_i">
-												<span class="icon_square" icon_size="25" span_bg="#c7151a" span_hover="#2f3239">
-													<i i_color="#FFF" class="icon-pinterest"></i>
-												</span>
-											</span>
+                                <span class="icon_i">
+                                    <span class="icon_square" icon_size="25" span_bg="#c7151a" span_hover="#2f3239">
+                                        <i i_color="#FFF" class="icon-pinterest"></i>
+                                    </span>
+                                </span>
                             </a>
                         </p>
                     </li>

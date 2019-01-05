@@ -40,10 +40,10 @@ url: www.2code.info
 	width: 5%;
 	margin: 28px 0px 0px;
 	position: absolute;
-	border: 2px solid #fdb655;
+	border: 2px solid #2f3239;
 	  border-radius: 5px;
 	  outline: none;
-	  color: #fdb655;
+	  color: #2f3239;
 	  background-color: #fafafafa;
 	}
 	input[type="search"]{
@@ -52,16 +52,16 @@ url: www.2code.info
 		height: 25px;
 		margin: 28px 42px 0px;
 		float: left;
-		  border: 2px solid #fdb655;
+		  border: 2px solid #2f3239;
 		  padding: 5px;
 		  border-radius: 5px;
 		  outline: none;
-		  color: #fdb655;
+		  color: #2f3239;
 	}
 	.icon-search {
     	position: absolute;
     	margin: -6px -6px 10px;
-    	color: #fdb655;
+    	color: #2f3239;
 	}
 }
 @media (min-width: 1200px) {
@@ -154,10 +154,10 @@ url: www.2code.info
 	width: 7%;
 	margin: 28px 0px 0px;
 	position: absolute;
-	border: 2px solid #fdb655;
+	border: 2px solid #2f3239;
 	  border-radius: 5px;
 	  outline: none;
-	  color: #fdb655;
+	  color: #2f3239;
 	  background-color: #fafafafa;
 	}
 	input[type="search"]{
@@ -166,16 +166,16 @@ url: www.2code.info
 		height: 25px;
 		margin: 28px 48px 0px;
 		float: left;
-		  border: 2px solid #fdb655;
+		  border: 2px solid #2f3239;
 		  padding: 5px;
 		  border-radius: 5px;
 		  outline: none;
-		  color: #fdb655;
+		  color: #2f3239;
 	}
 	.icon-search {
     	position: absolute;
     	margin: -6px -6px 10px;
-    	color: #fdb655;
+    	color: #2f3239;
 	}
 	.inner {
 		width: 768px;
@@ -749,10 +749,10 @@ url: www.2code.info
 	width: 9%;
 	margin: 28px 0px 0px;
 	position: absolute;
-	border: 2px solid #fdb655;
+	border: 2px solid #2f3239;
 	  border-radius: 5px;
 	  outline: none;
-	  color: #fdb655;
+	  color: #2f3239;
 	  background-color: #fafafafa;
 	}
 	input[type="search"]{
@@ -761,16 +761,16 @@ url: www.2code.info
 		height: 25px;
 		margin: 28px 40px 0px;
 		float: left;
-		  border: 2px solid #fdb655;
+		  border: 2px solid #2f3239;
 		  padding: 5px;
 		  border-radius: 5px;
 		  outline: none;
-		  color: #fdb655;
+		  color: #2f3239;
 	}
 	.icon-search {
     	position: absolute;
     	margin: -6px -6px 10px;
-    	color: #fdb655;
+    	color: #2f3239;
 	}
 	.search form i{
 		margin: 10px;
