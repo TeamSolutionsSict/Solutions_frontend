@@ -1,4 +1,11 @@
-@extends('master-page')
+@extends('page.master')
+
+@section ('section-warp')
+    <div class="section-warp ask-me">
+
+    </div><!-- End section-warp -->
+@endsection
+
 @section('content')
 
     <div class="page-content ask-question">
@@ -13,7 +20,7 @@
                 <input type="checkbox" name="agree" id="agree"> I agree to the terms of use.
             </div>
             <div class="col-md-2">
-                <a href="{{ route('getAddQuestion') }}" title=""><input type="submit" id="publish-question" value="Continue" class="button color small submit"></a>
+                <a href="{{ route('get.AddQuestion') }}" title=""><input type="submit" id="publish-question" value="Continue" class="button color small submit"></a>
             </div>
         </div>
 
