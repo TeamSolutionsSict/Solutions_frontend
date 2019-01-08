@@ -13,7 +13,7 @@
         <div class="boxedtitle page-title"><h2>Ask Question</h2></div>
 
         <div class="form-style form-style-3" id="question-submit">
-            <form action="" method="POST">{{-- {{ route('post.AddQuestion') }} --}}
+            <form action="{{ route('post.AddQuestion') }} " method="POST">
                 {{ csrf_field() }}
                 <div class="form-inputs clearfix">
                     <p>

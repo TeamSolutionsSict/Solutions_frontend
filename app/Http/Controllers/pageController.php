@@ -29,6 +29,11 @@ class pageController extends Controller
         return view('page.add_question');
     }
 
+//    Question Details
+    public function getQuestionDetails(){
+    return view('page.question_details');
+}
+
 //    public function getQuestionDetails($id){
 //        $post=PostModel::select('*')
 //            ->join('tb_user', 'tb_user.username', '=', 'tb_post.username')
@@ -60,63 +65,59 @@ class pageController extends Controller
 //        return view('page.question_details', compact('post','comment'));
 //    }
 
-//    public function postAddQuestion(Request $request){
-//        //Lấy thời gian hiện tại
-//        $date = new Datetime();
-//        //Lấy username
-//        $username = 'cuongdeptrai';
-//        //id_post = username + ngày giờ hiện tại + random 8 ký tự
-//        $ahihi = $username.$date->format('d-m-Y').Str::random(8);
-//        $idPost = Hash::make($ahihi);
-//
-//        //Validator form nhập vào
-//        $rules = [
-//            'title' => 'required',
-//            'content' => 'required',
-//        ];
-//        $validator = $request->validate($rules);
-//
-//        $keyArr = explode(',',$request->question_tags);
-//        foreach ($keyArr as $key => $value) {
-//            $keyword = KeywordModel::where('keyword','=',$value)->get()->toArray();
-//            //dd($keyword[0]['id']);
-//
-//            if(count($keyword) == 0){
-//                $keyword = new KeywordModel();
-//                $keyword->keyword = $value;
-//                $keyword->status = 1;
-//                $keyword->save();
-//
-//                $keypost = new PostkeyModel();
-//                $keypost->id_post = $idPost;
-//                $keypost->id_keyword = $keyword->id;
-//                $keypost->save();
-//            }else{
-//                $keypost = new PostkeyModel();
-//                $keypost->id_post = $idPost;
-//                // dd($keyword[0]['id']);
-//                $keypost->id_keyword = $keyword[0]['id'];
-//                $keypost->save();
-//            }
-//        }
-//
-//        $post = new PostModel();
-//        $post->id = $idPost;
-//        $post->title = $request->title;
-//        $post->content = $request->content;
-//        $post->username = $username;
-//        $post->timepost = $date;
-//        $post->status = 1;
-//        $post->save();
-//
-//        return redirect()->back()->with(['flag'=>'success','message'=>'Thành công !']);
-//
-//    }
+    public function postAddQuestion(Request $request){
+        //Lấy thời gian hiện tại
+        $date = new Datetime();
+        //Lấy username
+        $username = 'ahihi';
+        //id_post = username + ngày giờ hiện tại + random 8 ký tự
+        $ahihi = $username.$date->format('d-m-Y').Str::random(8);
+        $idPost = Hash::make($ahihi);
 
-//    Question Details
-    public function getQuestionDetails(){
-        return view('page.question_details');
+        //Validator form nhập vào
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+        ];
+        $validator = $request->validate($rules);
+
+        $keyArr = explode(',',$request->question_tags);
+        foreach ($keyArr as $key => $value) {
+            $keyword = KeywordModel::where('keyword','=',$value)->get()->toArray();
+            //dd($keyword[0]['id']);
+
+            if(count($keyword) == 0){
+                $keyword = new KeywordModel();
+                $keyword->keyword = $value;
+                $keyword->status = 1;
+                $keyword->save();
+
+                $keypost = new PostkeyModel();
+                $keypost->id_post = $idPost;
+                $keypost->id_keyword = $keyword->id;
+                $keypost->save();
+            }else{
+                $keypost = new PostkeyModel();
+                $keypost->id_post = $idPost;
+                // dd($keyword[0]['id']);
+                $keypost->id_keyword = $keyword[0]['id'];
+                $keypost->save();
+            }
+        }
+
+        $post = new PostModel();
+        $post->id = $idPost;
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->username = $username;
+        $post->timepost = $date;
+        $post->status = 1;
+        $post->save();
+
+        return redirect()->back()->with(['flag'=>'success','message'=>'Thành công !']);
+
     }
+
 //    Profile
     public function getProfile(){
         return view('page.profile');

@@ -2,7 +2,7 @@
     <div class="widget widget_stats">
         <h3 class="widget_title">Stats</h3>
         <div class="ul_list ul_list-icon-ok">
-            <a style="color: white; width: 100%; text-align: center" href="#" class="button large lime-green-button">Add Questions</a>
+            <a style="color: white; width: 100%; text-align: center" href="{{route('get.Terms')}}" class="button large lime-green-button">Add Questions</a>
             <ul>
                 <li><i class="icon-question-sign"></i><a href="#">Total Of Questions<span> ( <span>30</span> ) </span></a></li>
                 <li><i class="icon-comment"></i><a href="#">Answered Questions<span> ( <span>10</span> ) </span></a></li>

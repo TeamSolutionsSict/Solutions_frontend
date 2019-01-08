@@ -17,7 +17,7 @@ Route::get('home',['as'=>'get.Home','uses'=>'pageController@getHome']);
 Route::get('terms',['as'=>'get.Terms','uses'=>'pageController@getTerms']);
 
 Route::get('add-question',['as'=>'get.AddQuestion','uses'=>'pageController@getAddQuestion']);
-//Route::post('add-question',['as'=>'post.AddQuestion','uses'=>'pageController@postAddQuestion']);
+Route::post('add-question',['as'=>'post.AddQuestion','uses'=>'pageController@postAddQuestion']);
 
 Route::get('question-details',['as'=>'get.QuestionDetails','uses'=>'pageController@getQuestionDetails']);
 //Route::get('question-details{id}',['as'=>'get.QuestionDetails','uses'=>'pageController@getQuestionDetails']);

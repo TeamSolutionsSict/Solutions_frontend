@@ -21,6 +21,46 @@ body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
 #warp {
 	background-color: #f3f3f3;
 	display: none;
@@ -645,15 +685,11 @@ div[class*="slider_shadow"]:before, div[class^="header_shadow"] {
 	z-index: 991;
 }
 .page-content,.about-author,.user-question,#related-posts {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 20px;
-	border: 1px solid #dedede;
+	padding: 10px;
 	background: #FFF;
-	-moz-box-shadow: 0 0 5px #dedede;
-	-webkit-box-shadow: 0 0 5px #dedede;
-	box-shadow: 0 0 5px #dedede;
+}
+.avtuser{
+	margin-top: 20px;
 }
 .page-content .widget,.widget .related-posts {
 	padding: 0 !important;
@@ -1467,7 +1503,7 @@ div[class*="slider_shadow"]:before, div[class^="header_shadow"] {
 .about-author {
 	overflow: hidden;
 	display: block;
-	margin: 0 0 30px;
+	margin: 0 0 15px;
 }
 .author-image {
 	float: left;
@@ -1690,7 +1726,7 @@ div[class*="slider_shadow"]:before, div[class^="header_shadow"] {
 	margin-bottom: 10px;
 }
 .comment-author {
-	margin-top: 5px;
+	margin-top: 0px;
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -1699,16 +1735,15 @@ div[class*="slider_shadow"]:before, div[class^="header_shadow"] {
 }
 .comment-vote {
 	float: left;
-	margin-top: 5px;
+	margin-top: -10px;
 	margin-right: 0;
 }
 .comment .question-vote-result {
-	margin-top: 10px;
 	margin-right: 20px;
 }
 .commentlist li .comment-meta {
 	float: left;
-	margin-top: 4px;
+	margin-top: 6px;
 	overflow: hidden;
 	height: 100%;
 }

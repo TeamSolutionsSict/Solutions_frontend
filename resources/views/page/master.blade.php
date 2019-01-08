@@ -28,6 +28,8 @@
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('page/images/favicon.png') }}">
+    <!-- PrismJS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/prism/prism.css') }}">
 
 </head>
 <body>
@@ -86,6 +88,7 @@
 <script src="{{ asset('page/js/tags.js') }}"></script>
 <script src="{{ asset('page/js/jquery.bxslider.min.js') }}"></script>
 <script src="{{ asset('page/js/custom.js') }}"></script>
+<script src="{{ asset('js/prism/prism.js') }}"></script>
 <!-- End js -->
 
 </body>
