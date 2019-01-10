@@ -108,6 +108,44 @@ img {
 	-o-animation: spin 1s linear infinite;
 	animation: spin 1s linear infinite;
 }
+#image-preview {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  /*background-color: #ffffff;
+  color: #ecf0f1;*/
+  border-radius: 50%;
+  border-color: #FDB655;
+    /*margin-left: 155px;*/
+    margin: 10px auto;
+}
+#image-preview input {
+  line-height: 20px;
+  font-size: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+
+#image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
 .boxed_body {
 	background: url(images/patterns/bg13.png) repeat;
 }
