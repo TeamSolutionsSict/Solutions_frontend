@@ -127,7 +127,11 @@ class pageController extends Controller
         return view('page.user');
     }
     //contact_us
-    public function getContact(){
-        return view('page.contact_us');
-    }
+//    public function getContact(){
+//        return view('page.contact_us');
+//    }
+//    public function  postContact(Request $Request){
+//        $contact =
+//
+//    }
 }
