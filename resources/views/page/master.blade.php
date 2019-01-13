@@ -56,7 +56,7 @@
             </div><!-- End main -->
 
             {{--SLIDE BAR--}}
-            @include ('page.slide-bar');
+            @include ('page.slide-bar')
             {{----}}
 
         </div><!-- End row -->

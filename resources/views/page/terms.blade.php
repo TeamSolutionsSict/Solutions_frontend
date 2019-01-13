@@ -11,18 +11,39 @@
     <div class="page-content ask-question">
         <div class="boxedtitle page-title"><h2>Đây là điều khoản</h2></div>
         <p>Nội dung điều khoản đang để trống</p>
-
         <h2>Cứ tích đã đọc và đồng ý là được nhé :v</h2>
         <hr>
         <br>
-        <div class="row">
-            <div class="col-md-10">
-                <input type="checkbox" name="agree" id="agree"> I agree to the terms of use.
-            </div>
-            <div class="col-md-2">
-                <a href="{{ route('get.AddQuestion') }}" title=""><input type="submit" id="publish-question" value="Continue" class="button color small submit"></a>
-            </div>
+        <div class="row checkBox">
+            <form action="">
+                <div onchange="inputEventPatched(this)" class="col-lg-10 checkBox1">
+                    <input type="checkbox" value='<a href="{{ route('get.AddQuestion') }}" type="submit" id="publish-question" class="button color small submit" style="text-align: center">Continue</a>'><span>I agree to the terms of use.</span>
+                </div>
+                <div class="col-lg-2">
+                    <div id="result" style="width: 100%">
+                        <input class="button small red-button" style="text-align: center; width: 100%" onclick="notChecked()" value="Continue">
+                    </div>
+                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                    <script>
+                        function notChecked() {
+                            swal ( "Can't continue" ,  "Please agree to the terms of use!" ,  "error" )
+                        }
+                    </script>
+                </div>
+            </form>
         </div>
+        <script language="javascript">
+            function inputEventPatched(obj){
+                var input = obj.children;
+                var html = '';
+                for (var i = 0; i < input.length; i++){
+                    if (input[i].checked){
+                        html += input[i].value;
+                    }
+                }
+                document.getElementById('result').innerHTML = html;
+            }
+        </script>
 
         <div class="form-style form-style-3" id="question-submit">
 
