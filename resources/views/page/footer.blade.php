@@ -13,7 +13,7 @@
                         <li>
                             <span>Hỗ trợ :</span>Số điện thoại: (+84)6969696969
                         </li>
-                        <li>Email : nqcuong17it3@sict.udn.vn </li>
+                        <li>Email : solutions@sict.udn.vn </li>
                     </ul>
                 </div>
             </div>

@@ -55,7 +55,7 @@
     </div>
 
     <div class="widget widget_tag_cloud">
-        <h3 class="widget_title">Tags</h3>
+        <h3 class="widget_title">Tags</h3>{{--Tag ở phần này sẽ hiển thị random--}}
         <a href="#">projects</a>
         <a href="#">Portfolio</a>
         <a href="#">Wordpress</a>
